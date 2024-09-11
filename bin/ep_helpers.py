@@ -56,8 +56,14 @@ if path_prepend != "":
 		from azure.storage.filedatalake import PathProperties
 		from azure.storage.blob import BlobServiceClient
 		from azure.storage.blob import BlobPrefix
+	except:
+		pass
+	try:
 		# Box Cloud
 		from boxsdk import JWTAuth, Client, BoxAPIException
+	except:
+		pass
+	try:
 		# SFTP
 		import paramiko
 		import pysftp
